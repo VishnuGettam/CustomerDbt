@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_schema
+    database: customer_db
+    schema: raw_schema
+    tables:
+      - name: CUSTOMERS
+      - name: CUSTOMER_ADDRESS
+      - name: CUSTOMER_DEMOGRAPHICS

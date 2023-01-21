@@ -25,7 +25,8 @@ with
                 ca_zip,
                 ' .'
             ) as completeaddress
-        from customer_db.raw_schema.customer_address
+        from {{ source('raw_schema', 'CUSTOMER_ADDRESS') }} 
+        
     )
 select *
 from customer_address_stg

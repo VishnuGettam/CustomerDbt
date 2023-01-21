@@ -9,7 +9,8 @@ with
             cd_marital_status as maritalstatus,
             cd_education_status as educationstatus,
             currentdemo_sk
-        from customer_db.raw_schema.customer_demographics
+        from {{ source('raw_schema', 'CUSTOMER_DEMOGRAPHICS') }} 
+        
     )
 
 select *
