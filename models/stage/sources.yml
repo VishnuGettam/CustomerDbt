@@ -5,6 +5,6 @@ sources:
     database: customer_db
     schema: raw_schema
     tables:
-      - name: CUSTOMERS
+      - name: CUSTOMER
       - name: CUSTOMER_ADDRESS
       - name: CUSTOMER_DEMOGRAPHICS

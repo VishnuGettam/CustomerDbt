@@ -5,7 +5,6 @@ with
     customer_address as (select * from {{ ref("dim_customer_address") }}),
     customer_demographics as (select * from {{ ref("dim_customer_demographics") }})
 select
-
     customer.customerid as customer_id,
     customer.firstname as first_name,
     customer.lastname as last_name,
