@@ -6,5 +6,11 @@ sources:
     schema: customer_stage
     tables:
       - name: DIM_CUSTOMER
+        columns:
+          - name: CUSTOMERID
+            tests:
+              - unique
+              - not_null
+              
       - name: DIM_CUSTOMER_ADDRESS
       - name: DIM_CUSTOMER_DEMOGRAPHICS

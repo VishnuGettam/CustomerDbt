@@ -6,5 +6,11 @@ sources:
     schema: raw_schema
     tables:
       - name: CUSTOMER
+        columns:
+          - name: C_CUSTOMER_ID
+            tests: 
+              - unique
+              - not_null
+              
       - name: CUSTOMER_ADDRESS
       - name: CUSTOMER_DEMOGRAPHICS
