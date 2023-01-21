@@ -17,4 +17,4 @@ WITH customer_stg AS (
 SELECT
     *
 FROM
-    customer_stg;
+    customer_stg
