@@ -12,7 +12,7 @@ WITH customer_stg AS (
         c_current_addr_sk AS currentaddress_sk,
         c_current_cdemo_sk AS currentdemo_sk
     FROM
-        customer
+        customer_db.raw_schema.customer
 )
 SELECT
     *

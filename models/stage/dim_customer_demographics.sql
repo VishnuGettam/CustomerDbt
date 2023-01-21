@@ -11,7 +11,7 @@ CD_GENDER as Gender,
 CD_MARITAL_STATUS as maritalstatus,
 CD_EDUCATION_STATUS as educationstatus,
 CD_DEMO_SK as currentdemo_sk
-from customer_demographics
+from customer_db.raw_schema.customer_demographics
 )
 
 select * from customer_demographics 

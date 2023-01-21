@@ -27,7 +27,7 @@ WITH customer_address_stg AS (
             ' .'
         ) AS completeaddress
     FROM
-        customer_address
+        customer_db.raw_schema.customer_address
 )
 SELECT
     *
