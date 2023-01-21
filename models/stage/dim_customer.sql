@@ -1,20 +1,16 @@
-{{ config(
-    materialized = 'table'
-) }}
+{{ config(materialized="table") }}
 
-WITH customer_stg AS (
+with
+    customer_stg as (
 
-    SELECT
-        c_customer_id AS customerid,
-        c_first_name AS firstname,
-        c_last_name AS lastname,
-        c_email_address AS emailaddress,
-        c_current_addr_sk AS currentaddress_sk,
-        c_current_cdemo_sk AS currentdemo_sk
-    FROM
-        customer_db.raw_schema.customer
-)
-SELECT
-    *
-FROM
-    customer_stg
+        select
+            c_customer_id as customerid,
+            c_first_name as firstname,
+            c_last_name as lastname,
+            c_email_address as emailaddress,
+            c_current_addr_sk as currentaddress_sk,
+            c_current_cdemo_sk as currentdemo_sk
+        from customer_db.raw_schema.customer
+    )
+select *
+from customer_stg
