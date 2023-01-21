@@ -10,7 +10,7 @@ with
             c_email_address as emailaddress,
             c_current_addr_sk as currentaddress_sk,
             c_current_cdemo_sk as currentdemo_sk
-        from  {{ source('raw_schema', 'CUSTOMERS') }} 
+        from  {{ source('raw_schema', 'CUSTOMER') }} 
    
     )
 select *

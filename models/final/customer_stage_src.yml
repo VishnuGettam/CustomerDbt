@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: customer_stage
+    database: customer_db
+    schema: customer_stage
+    tables:
+      - name: DIM_CUSTOMER
+      - name: DIM_CUSTOMER_ADDRESS
+      - name: DIM_CUSTOMER_DEMOGRAPHICS

@@ -1,7 +1,7 @@
-{{ config(materialized="view") }}
+{{ config(materialized="table") }}
 
 with
-    customer as (select * from {{ ref("dim_customer") }}),
+    customer as (select * from {{ ref("dim_customer") }} ),
     customer_address as (select * from {{ ref("dim_customer_address") }}),
     customer_demographics as (select * from {{ ref("dim_customer_demographics") }})
 select
@@ -19,4 +19,3 @@ inner join
 inner join
     customer_demographics
     on customer.currentdemo_sk = customer_demographics.currentdemo_sk
-;
