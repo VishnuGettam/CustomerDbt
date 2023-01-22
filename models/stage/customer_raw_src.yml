@@ -2,10 +2,12 @@ version: 2
 
 sources:
   - name: raw_schema
+    description: Customers raw data pulled form other data sources
     database: customer_db
     schema: raw_schema
     tables:
       - name: CUSTOMER
+        description: customers data 
         columns:
           - name: C_CUSTOMER_ID
             tests: 
@@ -13,4 +15,6 @@ sources:
               - not_null
               
       - name: CUSTOMER_ADDRESS
+        description: complete address information of customers
       - name: CUSTOMER_DEMOGRAPHICS
+        description: demographic information of customers
